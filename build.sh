@@ -99,7 +99,7 @@ case $profile in
 	target_siflower_gl-sft1200)
 		python3 setup.py -c configs/config-siflower-18.x.yml
 		ln -s $base/gl-infra-builder/openwrt-18.06/siflower/openwrt-18.06 ~/openwrt && cd ~/openwrt
-		./scripts/gen_config.py $profile custom
+		./scripts/gen_config.py $profile glinet_depends luci custom
 		build_firmware
 		copy_file ~/openwrt/bin/targets/*
 	;;
